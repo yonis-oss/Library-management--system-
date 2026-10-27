@@ -1,13 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return """
-    <h1>Library Management System</h1>
-    <p>Welcome to our Library!</p>
-    """
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run()
